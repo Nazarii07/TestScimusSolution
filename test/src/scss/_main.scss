@@ -1,0 +1,203 @@
+// Write your styles here
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@mixin font-family{
+  font-family: Arial, Helvetica, sans-serif;
+}
+@mixin border-nav{
+  border-right: 1px solid $textColor ;
+}
+
+.main-wrapper{
+  margin: 0 auto;
+  width: 1500px;
+  overflow: hidden;
+}
+
+.header{
+  background-image: url(../img/header_background_v1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 920px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+      img{
+        width: 220px;
+      }
+    }
+    .nav-block{
+      a{
+        display: inline-block;
+        color: $textColor;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        width: 250px;
+        height: 50px;
+      }
+      a:nth-child(1),
+      a:nth-child(2){
+        @include border-nav;
+      }
+    }
+  }
+  .header-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1,a{
+      color: $textColor;
+      text-transform: uppercase;
+    }
+    a{
+      text-decoration: none;
+      display: inline-block;
+      background-color: $btnTitleColor;
+      padding: 15px 80px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.container{
+  margin: 0 auto;
+  width: 1000px;
+  .toolbar{
+    margin: 15px 0 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    input{
+      padding: 5px;
+    }
+  }
+  .post-list{
+    h1{
+      text-align: end;
+      text-transform: uppercase;
+    }
+    .article{
+      display: flex;
+      padding: 10px 20px 10px 10px;
+      background-color: $backgroundColor;
+      margin-bottom: 20px;
+      img{
+        width: 250px;
+      }
+      .post-content{
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+.post{
+  .post-description{
+    color: red;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+  }
+  h3{
+    text-transform: uppercase;
+    color: $btnTitleColor;
+  }
+}
+.btn{
+  background-color: $btnTitleColor;
+  color: $textColor;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 60px;
+  margin-top: 20px;
+}
+
+.about{
+  margin: 0 auto;
+  width: 1000px;
+  .about-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h1{
+      text-transform: uppercase;
+    }
+    p{
+      margin-bottom: 15px;
+    }
+  }
+  .about-photo{
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.contact-form{
+  margin: 0 auto;
+  width: 1000px;
+  .contact-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    h4{
+      text-transform: uppercase;
+    }
+  }
+}
+.field-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .userName,
+    .email{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: $btnTitleColor;
+      input{
+        height: 40px;
+        width: 490px;
+        border: 1px solid $btnTitleColor;
+      }
+    }
+    .userQuestion{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: $btnTitleColor;
+      margin-top: 15px;
+      textarea{
+        height: 90px;
+        width: 1000px;
+        border: 1px solid $btnTitleColor;
+      }
+    }
+  }
+}
+h1,h4,h3,p{
+  @include font-family;
+}
+.btn-block{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

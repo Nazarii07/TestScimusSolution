@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Area</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container" id="main-container">
+    <div class="info-center-container">
+      <div class="page-title-containet">
+        <h1>ZEN TEXTAREA</h1>
+      </div>
+      <div class="content-container" >
+        <div class="title-content-block" id='title-content-block'>
+          <span class="content-block-title-style-text">What`s on your mind?</span>
+          <div class="extend-shrink-container">
+            <button id="click" class="click-btm-expand">
+              <div id="imgOpen" class="arrow-open"></div>
+              <span id="content">EXPAND</span>
+            </button>
+          </div>
+        </div>
+        <form class="form-container" id="formBlock">
+          <textarea type="text" name="yourMessage" id="yourmind" class="yourmind" placeholder="Leave a comment"></textarea>
+          <input type="submit" value="SUBMIT MESSAGE" class="submit-btn"/>
+        </form>
+      </div>
+      <div id="printBlock"></div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
